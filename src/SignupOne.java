@@ -257,6 +257,7 @@ public class SignupOne extends JFrame implements ActionListener {
                     pst.executeUpdate();
                 }
 
+                //Here we call the constructor of Signuptwo class
                 setVisible(false);
                 new Signuptwo(formno).setVisible(true);
             } catch (SQLException sqlEx) {
