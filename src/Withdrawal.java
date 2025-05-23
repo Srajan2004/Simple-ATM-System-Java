@@ -116,5 +116,6 @@ public class Withdrawal extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
+        new Withdrawal("2004", "2481157071329795");
     }
 }

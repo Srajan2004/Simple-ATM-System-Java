@@ -44,6 +44,7 @@ public class MiniStatement extends JFrame {
         back.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
+                new Login().setVisible(true);
               
             }
         });

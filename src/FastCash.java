@@ -117,7 +117,7 @@ public class FastCash extends JFrame implements ActionListener {
 
             
             String txnDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-            String withdrawalQuery = "INSERT INTO bank (Pin, TxnDate, Type, Amount, CardNumber) VALUES (?, ?, ?, ?, ?)";
+            String withdrawalQuery = "INSERT INTO bank (Pin, Date, Type, Amount, CardNumber) VALUES (?, ?, ?, ?, ?)";
             try (PreparedStatement psWithdrawal = conn.c.prepareStatement(withdrawalQuery)) {
                 psWithdrawal.setString(1, pinNumber);
                 psWithdrawal.setString(2, txnDate);
@@ -155,6 +155,6 @@ public class FastCash extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new FastCash("7099", ""); // Example usage
+        new FastCash("2004", "2481157071329795"); // Example usage
     }
 }
