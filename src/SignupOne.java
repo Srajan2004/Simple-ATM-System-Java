@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.PreparedStatement; // Changed to PreparedStatement
+import java.sql.PreparedStatement; 
 import java.sql.SQLException;
 import java.util.*;
 import java.text.SimpleDateFormat;
@@ -218,24 +218,33 @@ public class SignupOne extends JFrame implements ActionListener {
 
              if (name.equals("")) {
                 JOptionPane.showMessageDialog(null, "Name is Required");
+                return;
             } else if (fname.equals("")) {
                 JOptionPane.showMessageDialog(null, "Father's Name is Required");
             } else if (dob == null) {
                 JOptionPane.showMessageDialog(null, "Date of Birth is Required");
+                return;
             } else if (email.equals("")) {
                 JOptionPane.showMessageDialog(null, "Email is Required");
+                return;
             } else if (!email.matches("^[\\w.-]+@[\\w.-]+\\.\\w{2,}$")) {
                 JOptionPane.showMessageDialog(null, "Invalid Email Format");
+                return;
             } else if (address.equals("")) {
                 JOptionPane.showMessageDialog(null, "Address is Required");
+                return;
             } else if (city.equals("")) {
                 JOptionPane.showMessageDialog(null, "City is Required");
+                return;
             } else if (state.equals("")) {
                 JOptionPane.showMessageDialog(null, "State is Required");
+                return;
             } else if (pincode.equals("")) {
                 JOptionPane.showMessageDialog(null, "Pincode is Required");
+                return;
             } else if (!pincode.matches("\\d{6}")) {
                 JOptionPane.showMessageDialog(null, "Pincode must be 6 digits");
+                return;
             }
 
             Conn c1 = null;
