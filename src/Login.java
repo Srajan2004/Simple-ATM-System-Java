@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException; // Explicitly import SQLException
+import java.sql.SQLException; 
 
 import javax.swing.*;
 
