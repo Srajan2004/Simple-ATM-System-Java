@@ -97,7 +97,7 @@ public class Login extends JFrame implements ActionListener {
             Conn conn = null;
             try {
                 conn = new Conn();
-                String query = "SELECT * FROM signupthree WHERE card_number = ? AND pin_number = ?";
+                String query = "SELECT * FROM login WHERE card_number = ? AND pin_number = ?";
                 try (PreparedStatement pst = conn.c.prepareStatement(query)) {
                     pst.setString(1, cardnumber);
                     pst.setString(2, pinnumber);

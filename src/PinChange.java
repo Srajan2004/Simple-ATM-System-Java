@@ -100,26 +100,26 @@ public class PinChange extends JFrame implements ActionListener {
                 conn = new Conn(); 
 
                 //*Update 'bank' table
-                String query1 = "UPDATE bank SET Pin = ? WHERE Pin = ?";
+                String query1 = "UPDATE bank SET Pin = ? WHERE CardNumber = ?";
                 try (PreparedStatement ps1 = conn.c.prepareStatement(query1)) {
                     ps1.setString(1, npin);
-                    ps1.setString(2, pinnumber);
+                    ps1.setString(2, cardnumber);
                     ps1.executeUpdate();
                 }
 
                 //*Update 'login' table
-                String query2 = "UPDATE login SET pin_number = ? WHERE pin_number = ?";
+                String query2 = "UPDATE login SET pin_number = ? WHERE card_number = ?";
                 try (PreparedStatement ps2 = conn.c.prepareStatement(query2)) {
                     ps2.setString(1, npin);
-                    ps2.setString(2, pinnumber);
+                    ps2.setString(2, cardnumber);
                     ps2.executeUpdate();
                 }
 
                 //*Update 'signupthree' table
-                String query3 = "UPDATE signupthree SET pin_number = ? WHERE pin_number = ?";
+                String query3 = "UPDATE signupthree SET pin_number = ? WHERE card_number = ?";
                 try (PreparedStatement ps3 = conn.c.prepareStatement(query3)) {
                     ps3.setString(1, npin);
-                    ps3.setString(2, pinnumber);
+                    ps3.setString(2, cardnumber);
                     ps3.executeUpdate();
                 }
 

@@ -80,14 +80,13 @@ public class FastCash extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        String amountText = ((JButton) ae.getSource()).getText().replace("Rs ", "");
-        int amount = Integer.parseInt(amountText);
-
         if (ae.getSource() == back) {
             setVisible(false);
             new Transaction(pinNumber, cardnumber).setVisible(true);
             return;
         }
+         String amountText = ((JButton) ae.getSource()).getText().replace("Rs ", "");
+        int amount = Integer.parseInt(amountText);
 
         Conn conn = null; 
         try {
