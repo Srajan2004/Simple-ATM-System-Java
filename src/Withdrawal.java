@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class Withdrawal extends JFrame implements ActionListener {
     JTextField amount;
     JButton withdrawal, back;
-    String pinnumber,cardnumber;
+   String pinnumber,cardnumber;
 
     Withdrawal(String pinnumber,String cardnumber) {
         this.pinnumber = pinnumber;
@@ -49,7 +49,7 @@ public class Withdrawal extends JFrame implements ActionListener {
         amount.addActionListener(this);
         image.add(amount);
 
-        withdrawal = new JButton("Withdrawa");
+        withdrawal = new JButton("Withdrawal");
         withdrawal.setBounds(355, 485, 150, 30);
         withdrawal.addActionListener(this);
         image.add(withdrawal);
@@ -66,6 +66,7 @@ public class Withdrawal extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == withdrawal) {
             String number = amount.getText();
+            String cardnumber= this.cardnumber;
             Date date = new Date(System.currentTimeMillis());
 
             if (number.equals("")) {
@@ -74,7 +75,7 @@ public class Withdrawal extends JFrame implements ActionListener {
                 Conn conn = null;
                 try {
                      conn = new Conn();
-                    String query = "INSERT INTO bank (Pin,Date,Type,Amount,CardNumber) VALUES (?, ?, ?, ?,?)";
+                    String query = "INSERT INTO bank (Pin,Date,Type,Amount,CardNumber) VALUES (?,?,?,?,?)";
                     PreparedStatement ps = conn.c.prepareStatement(query);
                     ps.setString(1, pinnumber);
                     ps.setString(2, date.toString());
@@ -86,6 +87,7 @@ public class Withdrawal extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Rs. " + number + " Withdrawed Successfully");
                     setVisible(false);
                     new Transaction(pinnumber,cardnumber).setVisible(true);
+                    System.out.println(cardnumber);
 
                 } catch (NumberFormatException nfe) {
                     JOptionPane.showMessageDialog(null, "Please enter a valid numeric amount.");

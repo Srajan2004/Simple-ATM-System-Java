@@ -11,6 +11,7 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
 
     BalanceEnquiry(String pinnumber,String cardnumber) {
         this.pinnumber = pinnumber;
+        this.cardnumber = cardnumber;
 
         // Frame Settings
         setSize(900, 900);
