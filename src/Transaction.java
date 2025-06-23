@@ -110,6 +110,7 @@ public class Transaction extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new Transaction("2004","5040935987815612"); 
+        
+        new Transaction("2004","5040935987815612");
     }
 }
