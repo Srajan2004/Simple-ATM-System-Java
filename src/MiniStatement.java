@@ -73,7 +73,7 @@ public class MiniStatement extends JFrame {
             }
 
            
-            String query = "SELECT Date, Type, Amount FROM bank WHERE Pin = ? ORDER BY Date DESC LIMIT 5"; // Get last 5
+            String query = "SELECT Date, Type, Amount FROM bank WHERE Pin = ? ORDER BY Date DESC LIMIT 15"; // Get last 15
             try (PreparedStatement psTxn = conn.c.prepareStatement(query)) {
                 psTxn.setString(1, pinnumber);
                 try (ResultSet rsTxn = psTxn.executeQuery()) {
