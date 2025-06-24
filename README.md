@@ -107,7 +107,7 @@ Before running this project, ensure you have the following installed:
     -- Table for Bank transactions
     CREATE TABLE bank (
         Pin VARCHAR(10),
-        TxnDate VARCHAR(50),
+        Date VARCHAR(50),
         Type VARCHAR(20),
         Amount DOUBLE,
         CardNumber VARCHAR(20)
