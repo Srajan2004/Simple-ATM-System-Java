@@ -1,7 +1,8 @@
 # ATM Management System (Java Swing & MySQL)
 
-![Preview](https://github.com/user-attachments/assets/be3da1e1-0a01-46eb-a974-a6a04b40f039)
 
+
+https://github.com/user-attachments/assets/483c5909-6933-4d31-80bc-27995ab79ddd
 
 
 
