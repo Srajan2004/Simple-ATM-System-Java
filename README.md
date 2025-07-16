@@ -1,5 +1,7 @@
 # ATM Management System (Java Swing & MySQL)
 
+![Preview](https://github.com/user-attachments/assets/e45ad8c2-a1ea-4013-88a9-5263fe3e5389)
+
 ## Project Overview
 
 This is a desktop-based ATM (Automated Teller Machine) Management System developed using Java Swing for the graphical user interface (GUI) and MySQL as the backend database. The system simulates basic ATM functionalities, allowing users to create accounts, log in, deposit funds, withdraw cash, change their PIN, view mini-statements, and check their account balance.
@@ -173,9 +175,3 @@ Before running this project, ensure you have the following installed:
 * **Card Number/PIN Generation:** Currently, these are simple random number generations. For a real system, they would involve more complex algorithms, uniqueness checks, and secure storage (hashing PINs).
 * **User Management:** No administrative user interface to manage user accounts or view all transactions.
 * **Concurrency:** The current design might not be robust for multiple concurrent users; for a multi-user environment, connection pooling and more advanced concurrency handling would be needed.
-
-
-https://github.com/user-attachments/assets/ceec7930-2870-4998-ba90-995358a3257f
-
-
----
