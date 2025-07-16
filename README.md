@@ -174,4 +174,8 @@ Before running this project, ensure you have the following installed:
 * **User Management:** No administrative user interface to manage user accounts or view all transactions.
 * **Concurrency:** The current design might not be robust for multiple concurrent users; for a multi-user environment, connection pooling and more advanced concurrency handling would be needed.
 
+
+https://github.com/user-attachments/assets/ceec7930-2870-4998-ba90-995358a3257f
+
+
 ---
