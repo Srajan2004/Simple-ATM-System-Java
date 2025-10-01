@@ -67,7 +67,7 @@ Before running this project, ensure you have the following installed:
 
     ```sql
     -- Table for SignupOne details
-    CREATE TABLE signup (
+    CREATE TABLE signupone (
         formno VARCHAR(20) PRIMARY KEY,
         name VARCHAR(100),
         fname VARCHAR(100),
